@@ -16,7 +16,7 @@ function userInformationHTML(user) {
 
 function repoInformationHTML(repos) {
     if (repos.length === 0) {
-        return `<div class="clearfix repo-list">No Repoas!</div>`;
+        return `<div class="clearfix repo-list">No Repos!</div>`;
     }
     var listItemsHTML = repos.map(function (repo) {
         return `<li><a href="${repo.html_url}" target="_blank">${repo.name}</a></li>`;
@@ -28,8 +28,8 @@ function repoInformationHTML(repos) {
 }
 
 function fetchGitHubInformation(event) {
-    $("gh-user-data").html("");
-    $("gh-repo-data").html("");
+    $("#gh-user-data").html("");
+    $("#gh-repo-data").html("");
 
     var username = $("#gh-username").val();
     if (!username) {
@@ -41,8 +41,12 @@ function fetchGitHubInformation(event) {
     );
 
     $.when(
-        $.getJSON(`https://api.github.com/users/${username}`),
-        $.getJSON(`https://api.github.com/users/${username}/repos`)
+        $.getJSON(
+            `https://cors-anywhere.herokuapp.com/https://api.github.com/users/${username}`
+        ),
+        $.getJSON(
+            `https://cors-anywhere.herokuapp.com/https://api.github.com/users/${username}/repos`
+        )
     ).then(
         function (firstResponse, secondResponse) {
             var userData = firstResponse[0];
@@ -60,7 +64,7 @@ function fetchGitHubInformation(event) {
                     errorResponse.getResponseHeader("X-RateLimit-Reset") * 1000
                 );
                 $("#gh-user-data").html(
-                    `<h4>Too many requests, please wait until ${resetTime.toLocaleDateString()}.</h4>`
+                    `<h4>Too many requests, please wait until ${resetTime.toLocaleTimeString()}.</h4>`
                 );
             } else {
                 console.log(errorResponse);
