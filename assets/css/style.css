@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
-
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700");
 
 /*----------------------------Colors */
 
@@ -39,10 +38,20 @@
     background-color: #525252;
 }
 
+.ui-menu-color-github {
+    background-color: #1c4a6c;
+}
+
+.ui-menu-color-interests {
+    background-color: #e74c3c;
+}
 
 /*----------------------------Special Paddings/Margins/Texts */
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     margin: 0;
 }
 
@@ -80,23 +89,23 @@ h1, h2, h3, h4 {
 
 /*----------------------------Heading */
 
-header{
+header {
     margin: 0;
 }
 
-.heading{
+.heading {
     margin-left: 50px;
 }
 
 .logo {
-    background:url("../images/rosie.jpg");
+    background: url("../images/rosie.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 360px;
-    transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
 }
 
 .name {
@@ -104,7 +113,7 @@ header{
     font-weight: 100;
     font-size: 46px;
     margin-top: 50px;
-    color: #fff; 
+    color: #fff;
 }
 
 .title {
@@ -166,10 +175,9 @@ header{
 
 /*----------------------------hover.css */
 .hvr-sweep-to-bottom:before {
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     height: 120px;
 }
-
 
 /*----------------------------Footer */
 
@@ -216,7 +224,7 @@ footer {
 }
 
 .social-links li a i:hover {
-    background:#e84610;
+    background: #e84610;
 }
 
 #footer-details {
@@ -242,12 +250,14 @@ footer {
     clear: both;
 }
 
-.personal-info-item .key, .personal-info-item .value {
+.personal-info-item .key,
+.personal-info-item .value {
     padding-right: 8px;
     display: inline-block;
 }
 
-.personal-info-item .key p, .personal-info-item .value p {
+.personal-info-item .key p,
+.personal-info-item .value p {
     margin: 0;
 }
 
@@ -327,14 +337,13 @@ footer {
     top: 2.4em;
     left: -6px;
     border-radius: 12px;
-    content: '';
+    content: "";
     background: #fafafa;
 }
 
 .history-items {
     margin-bottom: 30px;
 }
-
 
 /*----------------------------Contact Form */
 
@@ -351,7 +360,7 @@ footer {
     max-width: 70%;
 }
 
-button[type=submit] {
+button[type="submit"] {
     margin-top: 15px;
     margin-bottom: 20px;
     color: #fafafa;
@@ -360,7 +369,7 @@ button[type=submit] {
 
 /*---------------------------- Media Queries */
 
-@media(min-width: 992px) {
+@media (min-width: 992px) {
     .center-form {
         padding-top: 30px;
         min-height: 240px;
